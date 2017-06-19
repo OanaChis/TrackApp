@@ -37,7 +37,7 @@ public class Project extends AbstractDomain{
 
 
 
-   // to do, implement add , remove session in project , to check
+   //  to check
 
     public void addSession(Session session) {
         session.setProject(this);
