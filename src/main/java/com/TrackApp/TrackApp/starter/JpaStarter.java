@@ -122,15 +122,16 @@ public class JpaStarter implements ApplicationListener<ContextRefreshedEvent> {
 
             // this part needs to be checked
 
-            project.setSessions(sessions);
 
-            sessions.forEach(session -> {
-
-            });
+//            sessions.forEach(session -> {
+//                session.setProject(project);
+//
+//            });
 
             project.setCustomer(user.getCustomer());
 
             project.calculateTotalDuration();
+
 
             projectService.saveOrUpdate(project);
 
@@ -153,9 +154,9 @@ public class JpaStarter implements ApplicationListener<ContextRefreshedEvent> {
         // to check
 
         Session session2 = new Session();
-        session1.setDuration(10);
+        session2.setDuration(20);
 
-        sessionService.saveOrUpdate(session1);
+        sessionService.saveOrUpdate(session2);
 
 
     }

@@ -54,4 +54,10 @@ public class CustomerRepoServicesImp implements CustomerService {
     public void delete(Integer id) {
         customerRepository.delete(id);
     }
+
+    @Override
+    public List<Customer> orderbyLastname() {
+
+        return null;
+    }
 }

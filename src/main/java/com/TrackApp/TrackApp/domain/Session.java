@@ -14,8 +14,6 @@ public class Session extends AbstractDomain {
     private double duration;
 
 
-
-
     @ManyToOne
     private Project project;
 

@@ -17,12 +17,15 @@ import java.util.List;
 @Service
 @Transactional(readOnly = true)
 public class SessionRepoServiceImp implements SessionService {
+
     private SessionRepository sessionRepository;
 
     @Autowired
     public void setSessionRepository(SessionRepository sessionRepository) {
         this.sessionRepository = sessionRepository;
     }
+
+
 
     @Override
     public List<?> listAll() {

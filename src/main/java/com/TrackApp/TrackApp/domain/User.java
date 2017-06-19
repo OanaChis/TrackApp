@@ -4,7 +4,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
-import java.util.List;
 
 /**
  * Created by oana_ on 6/14/2017.
@@ -39,8 +38,7 @@ public class User implements DomainObject {
     @OneToOne(cascade = CascadeType.ALL)
     private Customer customer;
 
-    @OneToMany
-    private List<Project> projects;
+
 
 
     public String getUserName() {
@@ -83,13 +81,6 @@ public class User implements DomainObject {
         this.version = version;
     }
 
-    public List<Project> getProjects() {
-        return projects;
-    }
-
-    public void setProjects(List<Project> projects) {
-        this.projects = projects;
-    }
 
     public String getEncryptedPassword() {
         return encryptedPassword;
